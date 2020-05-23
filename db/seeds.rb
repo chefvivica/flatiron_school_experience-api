@@ -25,4 +25,9 @@ Avatar.create(name:"Greggoy",user_id:User.all.sample.id, turns:0, skills:0,point
 Avatar.create(name:"Oscar",user_id:User.all.sample.id, turns:0, skills:0,points:0)
 Avatar.create(name:"Louie",user_id:User.all.sample.id, turns:0, skills:0,points:0)
 
-puts"create Avatar"
+
+10.times do 
+    Avatar.create(name: Faker::Name.name, user_id: User.all.sample.id, turns: rand(1..6), skills: rand(1..10), points: rand(1..20))
+end 
+
+puts "create Avatar"
