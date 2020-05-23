@@ -19,10 +19,10 @@ User.create(username:"Mike")
 
 
 
-Avatar.create(name:"Molly",user_id:User.all.sample, turns:0, skills:0,points:0)
-Avatar.create(name:"Gracie",user_id:User.all.sample, turns:0, skills:0,points:0)
-Avatar.create(name:"Greggoy",user_id:User.all.sample, turns:0, skills:0,points:0)
-Avatar.create(name:"Oscar",user_id:User.all.sample, turns:0, skills:0,points:0)
-Avatar.create(name:"Louie",user_id:User.all.sample, turns:0, skills:0,points:0)
+Avatar.create(name:"Molly",user_id:User.all.sample.id, turns:0, skills:0,points:0)
+Avatar.create(name:"Gracie",user_id:User.all.sample.id, turns:0, skills:0,points:0)
+Avatar.create(name:"Greggoy",user_id:User.all.sample.id, turns:0, skills:0,points:0)
+Avatar.create(name:"Oscar",user_id:User.all.sample.id, turns:0, skills:0,points:0)
+Avatar.create(name:"Louie",user_id:User.all.sample.id, turns:0, skills:0,points:0)
 
 puts"create Avatar"
