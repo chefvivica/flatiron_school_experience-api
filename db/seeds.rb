@@ -5,3 +5,24 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+Avatar.destroy_all 
+User.destroy_all 
+
+
+User.create(username:"Liz")
+User.create(username:"Viv")
+User.create(username:"Mike")
+
+
+
+
+
+Avatar.create(name:"Molly",user_id:User.all.sample, turns:0, skills:0,points:0)
+Avatar.create(name:"Gracie",user_id:User.all.sample, turns:0, skills:0,points:0)
+Avatar.create(name:"Greggoy",user_id:User.all.sample, turns:0, skills:0,points:0)
+Avatar.create(name:"Oscar",user_id:User.all.sample, turns:0, skills:0,points:0)
+Avatar.create(name:"Louie",user_id:User.all.sample, turns:0, skills:0,points:0)
+
+puts"create Avatar"
