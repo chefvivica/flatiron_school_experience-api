@@ -10,13 +10,9 @@
 Avatar.destroy_all 
 User.destroy_all 
 
-
 User.create(username:"Liz")
 User.create(username:"Viv")
 User.create(username:"Mike")
-
-
-
 
 
 Avatar.create(name:"Molly",user_id:User.all.sample.id, turns:0, skills:0,points:0)
