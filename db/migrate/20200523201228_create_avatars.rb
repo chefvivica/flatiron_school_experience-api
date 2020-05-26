@@ -6,6 +6,7 @@ class CreateAvatars < ActiveRecord::Migration[6.0]
       t.integer :turns
       t.integer :skills
       t.integer :points
+      t.string :image_url
 
       t.timestamps
     end
