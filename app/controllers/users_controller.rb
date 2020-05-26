@@ -1,6 +1,9 @@
 class UsersController < ApplicationController
     def index 
-        users = User.all 
+        users = User.all
+        users.each do |user|
+           user.avatars.sort_by{  | av | av[:points] }
+        end
         render json: users.to_json(:include => {
             :avatars => {:only => [:name, :skills, :points, :turns, :id]}
         }, except: [:created_at, :updated_at])
@@ -18,6 +21,7 @@ class UsersController < ApplicationController
     def show 
         user = User.find_by(id: params[:id])
         if user 
+            user.avatars.sort_by{  | av | av[:points] }.reverse
         render json: user.to_json(:include => {
             :avatars => {:only => [:name, :skills, :points, :turns, :id]}
         }, except: [:created_at, :updated_at])
