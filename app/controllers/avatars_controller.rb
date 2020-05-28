@@ -24,6 +24,6 @@ class AvatarsController < ApplicationController
     private 
 
     def avatar_params 
-        params.require(:avatar).permit(:user_id, :name, :turns, :points)
+        params.require(:avatar).permit(:user_id, :name, :image_url, :turns, :points)
     end 
 end
