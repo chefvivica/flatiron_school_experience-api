@@ -1,7 +1,6 @@
 class AvatarsController < ApplicationController
     def index 
         avatars = Avatar.all 
-        avatars.sort_by(&:skills)
         render json: avatars.to_json( except: [:created_at, :updated_at])
     end 
 
@@ -25,6 +24,6 @@ class AvatarsController < ApplicationController
     private 
 
     def avatar_params 
-        params.require(:avatar).permit(:user_id, :name, :turns, :skills, :points)
+        params.require(:avatar).permit(:user_id, :name, :turns, :points)
     end 
 end

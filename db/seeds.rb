@@ -9,7 +9,7 @@ User.create(username: Faker::Name.unique.name)
 end 
 
 28.times do 
-    Avatar.create(name: Faker::Name.name, image_url: pictures.sample, user_id: User.all.sample.id, turns: rand(1..6), skills: rand(1..10), points: rand(1..20))
+    Avatar.create(name: Faker::Name.name, image_url: pictures.sample, user_id: User.all.sample.id, turns: rand(1..6), points: rand(1..20))
 end 
 
 puts "create Avatar"

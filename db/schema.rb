@@ -19,7 +19,6 @@ ActiveRecord::Schema.define(version: 2020_05_23_201228) do
     t.integer "user_id"
     t.string "name"
     t.integer "turns"
-    t.integer "skills"
     t.integer "points"
     t.string "image_url"
     t.datetime "created_at", precision: 6, null: false
