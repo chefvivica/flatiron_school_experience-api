@@ -21,6 +21,15 @@ class AvatarsController < ApplicationController
         end 
     end 
 
+    def edit 
+        avatar = Avatar.find(params[:id])
+    end 
+
+    def update 
+        avatar = Avatar.find(params[:id])
+        avatar.update(avatar_params)
+    end 
+
     private 
 
     def avatar_params 
